@@ -37,3 +37,5 @@ use private key that you generated that public key
 6 : cat keyname.pub -> will show key 
 7 :  copy it pbcopy < ~/keyname.pub
 
+# git push origin (branch name)
+1: origin -> option set for location to get our repository
