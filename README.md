@@ -40,3 +40,4 @@ use private key that you generated that public key
 # git push origin (branch name)
 1: origin -> option set for location to get our repository
 2: I am chcking if this works or not
+3: I am checking again 
