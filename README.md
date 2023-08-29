@@ -49,3 +49,12 @@ use private key that you generated that public key
 
 # Local Git:
     write code -> Stage Changes(git add .) -> Commit Change(git commit -m "") -> push change(git push origin main) -> Make a pull request. 
+
+
+
+# Extras
+1. git push origin main
+2. git remote set-url origin "url"
+3. ssh-add ~/.ssh/keyname
+3.ii ssh -T git@github.com
+4. git remote -v
