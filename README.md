@@ -58,3 +58,28 @@ use private key that you generated that public key
 3. ssh-add ~/.ssh/keyname
 3.ii ssh -T git@github.com
 4. git remote -v
+
+
+# Branches
+ main Branch is Default Branch
+
+...Another Branch or Feature Branch
+...If you made commit to F branch you will see only changing them into feauture branch
+...but if you switch to main branch you wont see any changes of feauture branch
+...Each branch keeping change of its own data
+...working on feauture branch for weeks
+...But there will be a bug that you have to fix using 
+...Hotfix Branch
+
+# Creating a new branch
+
+git checkout -b nameofbranch-description-description
+
+git merge : to merge two branches code
+git diff : what difference has made
+
+# New Data After creating new branch
+Hello!!!!!!!!!!!!!!
+
+# I am pushing again 
+Pusign again to check
