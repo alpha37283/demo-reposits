@@ -41,3 +41,11 @@ use private key that you generated that public key
 1: origin -> option set for location to get our repository
 2: I am chcking if this works or not
 3: I am checking again 
+
+
+# Workflows
+# Github: 
+    write code -> Commit change -> Make a pull request
+
+# Local Git:
+    write code -> Stage Changes(git add .) -> Commit Change(git commit -m "") -> push change(git push origin main) -> Make a pull request. 
