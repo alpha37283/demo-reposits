@@ -108,3 +108,10 @@ only if upstream is on
 then Delete other new branch because now we dont need that.
 
 git branch -d newbranchname
+
+
+# merge conflict 
+
+when multiple people are using same branch, there may be conflict
+1. Del previous branch
+2 create new branch
