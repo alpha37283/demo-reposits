@@ -115,3 +115,19 @@ git branch -d newbranchname
 when multiple people are using same branch, there may be conflict
 1. Del previous branch
 2 create new branch
+MD
+3 stashing is temporarily storing data for some time, and then retrieve
+4 YOU Cant change branches unuless you commit
+commit another type is this case no need to add: git commit -am "message"
+5 then if we will merge (git merge main) it will show a conflict
+
+# Resolving Conflict
+Interface
+Terinal
+Using Code Editor
+Reslove conflict by removing Markers 
+then Commit
+
+# Note :
+There are different level of repos on which you can 
+create branches
