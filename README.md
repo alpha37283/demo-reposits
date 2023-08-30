@@ -131,3 +131,34 @@ then Commit
 # Note :
 There are different level of repos on which you can 
 create branches
+
+# Git Undoing 
+
+Undoing after staging/adding:
+git reset 
+git reset nameoffile
+
+Undoing a commit 
+
+git reset HEAD~1(pointing to last commit, 1 means 1 stage early / previous)
+
+going to specific commit
+
+1. git log (checking commits)
+2. copy hash from that log of specific commit
+3. git reset hash
+
+4 .get rid of all changes from a ertain point
+
+git reset --hard hash (not only remove staging/commiting but all data)
+
+# git forking 
+
+forking someone/ copying someone's data
+
+1. if want PR, or be able to branch then need fork
+2. fork to user account
+3. compelete access to changes
+Watch fork when needed
+4. you can compare and make pull request some other's branch and repos with yours
+Sometimes not to delete after we used some branch(other then default)
