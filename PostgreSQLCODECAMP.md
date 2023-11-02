@@ -131,12 +131,21 @@ another method is _ underscore: says this has to match single characters
 e.g., 
 WHERE email LIKE '_____@gmail.com'
 
-# iLike Ignores the CASE Sensitive
+iLike Ignores the CASE Sensitive
+
+# Aggregate Functions like COUNT(*)
 
 
+# GROUP BY and COUNT(*)
 
+SELECT coloumnToGroup,COUNT(*) FROM person GROUP BY coulomnName;
 
+# GROUP BY HAVING
+: Provides extra filtering 
+HAVING keyword must be before ORDER BY
+SELECT coloumnToGroup,COUNT(*) FROM person GROUP BY coulomnName HAVING COUNT(*) > 5 ;  // COUNT(*) > 5 is a condition
 
+# MAX(colomn name) MIN and AVG ROUND(AVG(price))
 
 
 
