@@ -145,9 +145,89 @@ SELECT coloumnToGroup,COUNT(*) FROM person GROUP BY coulomnName;
 HAVING keyword must be before ORDER BY
 SELECT coloumnToGroup,COUNT(*) FROM person GROUP BY coulomnName HAVING COUNT(*) > 5 ;  // COUNT(*) > 5 is a condition
 
-# MAX(colomn name) MIN and AVG ROUND(AVG(price))
+# MAX(colomn name) MIN and AVG ROUND(AVG(price)) 
+# SUM(price or coloumn name)
 
+# Arthmetic Operators + - * / %
+Arthmetic operators ROUND 
 
+SELECT id,make,price,ROUND(price * .10) FROM car; 10 percent discount on a car;
+
+check screenshots
+
+# ALIAS : AS
+: if we dont specify colomn name, it will use ?colomn? or name of function to solve this problem 
+
+# COALESCE 
+: default value in case first is not present 
+SELECT COALESCE(coloumn name, condition if null);  (null,null,1) try first, second and then 1
+
+# NULLIF 
+tackle division by 0
+takes two argument, return 1st if second is not equal to first SELECT NULLIF(n,n); => false else true
+
+# TIME STAMPS AND DATES
+1) NOW();
+2) SELECT NOW() :: DATE;
+
+Adding Subtracting Dates 
+
+a. SELECT NOW() - INTERVAL '1 YEAR/DAYS/MONTHS ';
+
+# EXTRACTING FIELDS 
+SLECT EXTRACT (year from now());
+
+# AGE FUNCTONS
+SELECT all other feilds,AGE(NOW(), date of birth) AS current_age FROM person 
+
+# PRIMARY KEYS: allows store unique records
+drop constraint
+ALTER TABLE person DROP CONSTRAINT person_pkey; // AFTER THIS WE CAN ADD similer colomn data
+
+ADDING PRIMARY KEY // but first remove same data rows
+ALTER TABLE person ADD PRIMARY KEY (array of value of coloumn);
+
+DELETE FROM person WHERE ID = 1;
+
+# UNIQUE CONSTRAINTS different from primary key
+why:  where we have DUPLICATE DATA 
+making coloumn unique
+ALTER TABLE ADD CONSRAINT 'unique_email_Address/UNIQUE (email);
+ALTER TABLE person ADD UNIQUE (email coloumn name);
+
+# CHECK CONSTRAINTS
+: allows constraint base on boolean condition 
+allow only female and male matching string 
+
+// first delete hello
+ALTER TABLE person ADD CONSTRAINT gender_constraint CHECK (gender = 'male' or gender = 'female'); 
+
+# DELETE records 
+use primary key most of the time while deleting 
+
+DELETE FROM tablename;   will delete everything
+
+task: delete 3 females from nigeria 
+
+# UPDATE RECORDS
+update coloumn: often base on where clause
+
+UPDATE person SET email = '    ' WHERE id = 'specific primary key';
+
+update multiple coloumn
+UPDATE person SET firstName = '',lastname ='', email = '' WHERE id = '';
+
+# ON CONFLICT DO NOTHING 
+// e.g., insert with same id will show error: DUPLICATE KEY VALUE then
+
+ON CONFLICT (id) DO NOTHING; // will do nothing
+
+# UPSERT check SS
+if we want to do something else instead DO NOTHING on error 
+
+DO UPDATE SET email = EXCLUDED.email 
+
+task: change email of a specfic id
 
 
 
