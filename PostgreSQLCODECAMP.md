@@ -33,26 +33,26 @@ CREATE TABLE table_name (
 	Coloumn name + data type + constraints if any
 )
 
-#Display table:
+# Display table:
 1) \d -> shows list of table
 2) \d tableName
 3) \dt 
 4) SELECT * FROM person;
 
 
-#Deleting a table: DROP TABLE tableName;
+# Deleting a table: DROP TABLE tableName;
 
-#Creating Table: with constraints 
+# Creating Table: with constraints 
 CREATE TABLE tebleName(
 Constraits 
 NULL KEY: dont accept NULL value
 PRIMARY KEY:
 )
 
-#id_sequence: will be generated if you are using BIGSERIAL: auto increment number, dont have to remember previous number.
+# id_sequence: will be generated if you are using BIGSERIAL: auto increment number, dont have to remember previous number.
 
 
-#Insert into:
+# Insert into:
 INSERT INTO tablename (parameters of table) // dont put simcolon
 VALUES( crossposning values to paramters);
 
@@ -62,13 +62,13 @@ VALUES( crossposning values to paramters);
 
 
 
-#Select From:
+# Select From:
 SELECT * FROM tableName;     // * means every single coloumn from the table
 SELECT colname FROM tableName;
 
 
 
-#How to Sort:
+# How to Sort:
 #Using Order By
 	Order By keyword = result will be ascending or descending, by default it will be Ascending
 1 2 3 4 5 ASC
@@ -77,28 +77,28 @@ SELECT * FROM person ORDER BY nameOfColoumn ASC/DESC;
 
 
 
-#Distinct: when we want a unique entity in colomn of a table
+# Distinct: when we want a unique entity in colomn of a table
 SELECT DISTINCT colomnName FROM tableName ORDER BY colomnName ASC/DSC;
 Duplicate entities will be shown once/mot multipbe;
 
 
 
-#Where Clause : filter data base on condition
+# Where Clause : filter data base on condition
 SELECT * FROM tableName WHERE condition;
 SELECT * FROM tableName WHERE gender = 'Female';
 
-Multiple Condition:
+# Multiple Condition:
 SELECT * FROM tableName WHERE condition AND condition ;
 
 
 
 
-#Comparison Operators 
+# Comparison Operators 
 < , > 
 <> => Not equal to 
 SELECT 1<2;
 
-#LIMIT KEYWORD : We want to select first 10 rows from table
+# LIMIT KEYWORD : We want to select first 10 rows from table
 SELECT * FROM tableNama LIMIT 10; // limit result by 10
 
 # OFFSET actual limit: very first 5 rows after certain index/row;
@@ -113,7 +113,7 @@ shortens the condtitinal statements
 SELECT * FROM person WHERE coloumnName IN('CHAINA','FRANCE','BRAZIL')
 ORDER BY coloumnName;
 
-#Between: Select data from range;
+# Between: Select data from range;
 SELECT * FROM tablename WHERE coloumn name BETWEEN 'range' AND 'range';
 
 #Like and iLiken: match text patterns
@@ -129,7 +129,7 @@ SELECT * FROM person WHERE email LIKE '%gmail.com' AND first_Name LIKE '%S';
 
 another method is _ underscore: says this has to match single characters 
 e.g., 
-WHERE email LIKE '-----@gmail.com'
+WHERE email LIKE '_____@gmail.com'
 
 # iLike Ignores the CASE Sensitive
 
