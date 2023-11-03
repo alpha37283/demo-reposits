@@ -116,7 +116,7 @@ ORDER BY coloumnName;
 # Between: Select data from range;
 SELECT * FROM tablename WHERE coloumn name BETWEEN 'range' AND 'range';
 
-#Like and iLiken: match text patterns
+# Like and iLiken: match text patterns
 SELECT * FROM tableName LIKE 'pattern'; (screen shot)
 '%.com' => any chracter followed by .com
 '%@gmail.com' => any chracter followed by @gmail.com
@@ -180,19 +180,23 @@ SLECT EXTRACT (year from now());
 # AGE FUNCTONS
 SELECT all other feilds,AGE(NOW(), date of birth) AS current_age FROM person 
 
+
+
+
+
 # PRIMARY KEYS: allows store unique records
 drop constraint
 ALTER TABLE person DROP CONSTRAINT person_pkey; // AFTER THIS WE CAN ADD similer colomn data
 
 ADDING PRIMARY KEY // but first remove same data rows
-ALTER TABLE person ADD PRIMARY KEY (array of value of coloumn);
+ALTER TABLE person ADD PRIMARY KEY (array of value of coloumn); // again adding priary key
 
 DELETE FROM person WHERE ID = 1;
 
 # UNIQUE CONSTRAINTS different from primary key
 why:  where we have DUPLICATE DATA 
 making coloumn unique
-ALTER TABLE ADD CONSRAINT 'unique_email_Address/UNIQUE (email);
+ALTER TABLE ADD CONSRAINT 'unique_email_Address' UNIQUE (email);    // making constraint unique
 ALTER TABLE person ADD UNIQUE (email coloumn name);
 
 # CHECK CONSTRAINTS
@@ -201,6 +205,10 @@ allow only female and male matching string
 
 // first delete hello
 ALTER TABLE person ADD CONSTRAINT gender_constraint CHECK (gender = 'male' or gender = 'female'); 
+
+
+
+
 
 # DELETE records 
 use primary key most of the time while deleting 
@@ -220,7 +228,7 @@ UPDATE person SET firstName = '',lastname ='', email = '' WHERE id = '';
 # ON CONFLICT DO NOTHING 
 // e.g., insert with same id will show error: DUPLICATE KEY VALUE then
 
-ON CONFLICT (id) DO NOTHING; // will do nothing
+ON CONFLICT (id) DO NOTHING; // will do nothing 
 
 # UPSERT check SS
 if we want to do something else instead DO NOTHING on error 
