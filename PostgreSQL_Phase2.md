@@ -68,8 +68,10 @@ could be use instead ids bigInt or Bigserial;
 global unique: migrate data across databases without any conflict 
 
 
+# Concept of Foreign key and Primary key 
+JOIN car USING (key name: when foreign and primary are same);
 
 
-
+# NEXT STEP: SPRING BOOT OR NODEJS AND EXPRESS
 
 
