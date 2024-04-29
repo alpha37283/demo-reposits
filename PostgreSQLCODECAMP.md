@@ -26,7 +26,7 @@ another way to connect a database
 2)psql -l localhost(use ip address if you trying to connect to a remote server) -p portNumber -U username name(isk why here is name again)
 
 Deleting a database:
-DROP DATABASE datbase name;   //  dangerous bcz all content lost, everthing
+DROP DATABASE database name;   //  dangerous bcz all content lost, everthing
 
 Creating Table: without constraints 
 CREATE TABLE table_name ( 
@@ -35,7 +35,7 @@ CREATE TABLE table_name (
 
 # Display table:
 1) \d -> shows list of table
-2) \d tableName
+2) \t tableName
 3) \dt 
 4) SELECT * FROM person;
 
