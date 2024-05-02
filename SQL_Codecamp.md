@@ -114,3 +114,13 @@ SELECT * FROM srtudent WHERE name IN(VALUES);  // select these values from stude
 
 
 
+
+
+# -------------------------COMPANY DATABASE STARTS-----------------------
+
+
+FOREIGN KEY => stores PRIMARY KEY of another table 
+COMPOUND PRIMARY KEY OR COMPOSITE KEY => 
+
+
+
