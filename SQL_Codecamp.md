@@ -220,6 +220,8 @@ INSERT INTO employee (emp_id, first_name, last_name, birth, sex, salary, supid, 
 2. AS
 3. DISTINCT  -> categorizes the same like if there are multiple F AND M 
 
+4. MODIFY to modify table datatypes and constraints
+
 
 # ----------------------SQL FUNCTIONS-----------------------
 
@@ -249,7 +251,7 @@ GROUP BY emp_id;
 
 
 
-# ---------------------WILD CARDS---------------------------
+# ---------------------WILD CARDS-------------------------
 
 LIKE KEYWORDS WITH wildcards use to find marching pattern  
 
@@ -267,3 +269,72 @@ SELECT * FROM client WHERE client_name LIKE
 for dates someone born in OCTOBER
 '_____-10%' -> 4 characters and then -10
 
+
+
+# ------------------------UNIONS------------------------
+
+Combine information of two columns 
+
+rule.
+i.  same number of columns must be select
+ii. similar data types of columns 
+
+SELECT ALL SUPPLIER AND CLIENTS NAMES;
+
+FIND THE MONEY COMPANY EARNED AND SPENT
+
+SELECT salary FROM employee UNION SELECT total_sales from works_with; 
+
+
+# ------------------------JOINTS------------------------
+
+combines two or more rows based on JOINED COLOMNS related 
+
+INSERT INTO branch(4, 'BUFFALO',NULL, NULL);
+
+    Q. FIND ALL BRANCHES AND THEIR MANAGERS
+
+SELECT employee.emp_id, employee.first_name, employee_last_name FROM employee JOIN branch ON branch.mgr_id = emp_id;   // manager of some branch is some person 
+
+
+4 types of JOINS
+
+1. GENERAL JOIN or inner join
+when some column has same common or shared
+2. LEFT 
+all of the rows inclued from the left column like here emp_id 
+
+3. RIGHT 
+OPPOSITE of the left 
+ALL ROWS FROM THE RIGHT table column 
+
+4. FULL OUTER JOIN not implemented in SQL 
+
+# -------------NESTED QUERIES-------------------
+
+multiple select statements to get a piece of statements
+
+Q.  find names of all employees who have sold more then 30000 to a client single 
+
+
+USING OTHER KEYWORDS LIKE IN(another query)
+
+
+Q. find with which client manager id 102 works  with
+
+first we find at which branch manager 102 works 
+
+then 
+
+SELECT branch.branch_Id WHERE manager_id = 102;
+
+SELECT client_name FROM client WHERE branch_id = (SELECT branch.branch_id WHERE mgr_id = 102);
+
+
+# -------------ON DELETE-----------------------
+
+deleting entries when entries are associated with other foreign keys 
+
+ON DELETE SET NULL => if we delete on employee then other foreign key is going to set NULL
+
+ON DELETE SET NULL => instead the whole associated ROW is going to be deleted
