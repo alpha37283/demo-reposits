@@ -338,3 +338,75 @@ deleting entries when entries are associated with other foreign keys
 ON DELETE SET NULL => if we delete on employee then other foreign key is going to set NULL
 
 ON DELETE SET NULL => instead the whole associated ROW is going to be deleted
+
+# -------------TRIGGERS-----------------------
+
+some operations or piece of queries when certain other condition or operation are happend, like when some query or row is inserted do something like remove some columns etc
+1. SETTIGN UP DELIMETER AND TRIGGER
+DELIMETER $$
+CREATE TRIGGER name_of_trigger ....some operation..... END $$
+DELIMETER;
+
+normally delimeter is a semicolon but when writing trigger there will be more then tow ; that is delimeter see fig.  
+
+delimeter don't works in text editor 
+
+NEW keyword will referred to row that got inserted 
+
+INSERT UPDATE OR DELETE BEFORE and AFTER 
+
+2. IF ELSEIF END IF;
+3. DROP TRIGGER trigger_name;
+
+
+# -------------Database Schema-----------------------
+Entity: an object about we store information likw for SCHOOL student is an entity RECTANGLE
+
+Attributes: information about entity connected to entities, OVAL
+
+Primary key: UNIQUELY IDENTIFIED key, underline 
+
+Composite attributes: can be broken into sub ATTRIBUTES 
+
+Multivalued attributes: having more then 1 value, double circle  like student might be involve in more then 1 club
+
+Derived attributes: cacn be derived from the other attributes , dashed oval
+
+Multiple entities: more than 1 entity
+
+Reltionships: student TAKES class, now TAKES is a diomond in relationships 
+
+DOUBLE LINE IN  FRONT OF RELATIONSHIP DIAMOND means total  participation PARTICIPATION single line means partial participation 
+
+Relationship attributes: 
+
+Relationship Cardinality: number of instance of an entity from a relationship can be associated
+
+A student can take any number of classes N:M njumber of student to many 
+
+1:n
+n:n
+n:m
+
+
+Weak entity: an entity that can not be uniquely identified by its attributes
+
+LIKE an exam can't exist without class 
+
+Identifying Reltaionship:
+to identify weak entity
+
+# Node: Total participation is must between weak identity and identifying relationship
+
+
+# Converting ER DIAGRAMS TO database
+
+1. Mapping or regular entity types
+2. Weak entity types
+3. Binary 1:1 relationship types. Include primary key of one entity as foreign key of other
+4. Binary 1:N relationship types. 1 side's primary key as foreign key into n side's.
+5. Binary N:M relationship types. new table who's Primary key(or composite or compound) is combination of both entity's primary key
+
+# --------Finished on 08062024
+
+
